@@ -15,7 +15,6 @@
 - `npm install` to install the dependent Node packages (building)
 - `gulp` to build the source (alternatively use `npm run build`)
 - `gulp test` to run the tests (alternatively use `npm run test`)
-- open `index.html` in your browser
 
 ## tools used
 
@@ -27,8 +26,9 @@
 - Babel for ES2015 -> ES5 compilation (via browserify) and uglify to minify
 - React as a JS framework (overkill here, it could/should be just a static page)
 - Mocha for JS testing
-- ESLint, Sass-lint & pug-lint for static analysis (along with CodeClimate for a GPA of the JS code)
+- ESLint, Sass-lint & pug-lint for static analysis
 - Travis for CI, running the tests and building for [https://jacogr.github.io/ethcore-jacogr](https://jacogr.github.io/ethcore-jacogr)
+- CodeClimate to do analysis (ESLint & GPA) and report on coverage (normally the go-to tool for the latter is Coveralls.io)
 
 ## deviations
 
@@ -42,3 +42,8 @@ The initial supplied JS file (included here as [src/components/ethcore.js](tree/
 - 2 space indenting (JS de-facto standards)
 - `oneof` keys duplicated, this was obviously not intended (2nd would override first, or in the case of Babel it would be merged) - changed to descriptive keys
 - there are more changes I would love to make...
+
+## naughty, naughty
+
+- No PRs made, i.e. direct pushes to master (instead of merges) - yes, I know, no excuses, although merging and cheking own work does sound a bit, erm, not right
+- ...
