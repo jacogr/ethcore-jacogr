@@ -19,4 +19,4 @@ git add --force client.css client.js index.html
 git commit -m "[CI skip] push to gh-pages"
 
 # send it up to the gh-pages branch
-git push --force origin gh-pages
+git push --force "https://${GH_TOKEN}@github.com/jacogr/ethcore-jacogr.git" HEAD:gh-pages
