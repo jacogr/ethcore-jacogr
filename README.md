@@ -5,6 +5,9 @@
 ## status
 
 [![Build Status](https://travis-ci.org/jacogr/ethcore-jacogr.svg?branch=master)](https://travis-ci.org/jacogr/ethcore-jacogr)
+[![Code Climate](https://codeclimate.com/github/jacogr/ethcore-jacogr/badges/gpa.svg)](https://codeclimate.com/github/jacogr/ethcore-jacogr)
+[![Issue Count](https://codeclimate.com/github/jacogr/ethcore-jacogr/badges/issue_count.svg)](https://codeclimate.com/github/jacogr/ethcore-jacogr)
+[![Test Coverage](https://codeclimate.com/github/jacogr/ethcore-jacogr/badges/coverage.svg)](https://codeclimate.com/github/jacogr/ethcore-jacogr/coverage)
 
 ## checking out
 
