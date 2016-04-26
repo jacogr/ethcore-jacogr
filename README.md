@@ -2,6 +2,10 @@
 
 [My (jacogr)](https://github.com/jacogr) submission for the [ethcore](https://ethcore.io) JS/HTML/CSS challenge.
 
+## status
+
+[![Build Status](https://travis-ci.org/jacogr/ethcore-jacogr.svg?branch=master)](https://travis-ci.org/jacogr/ethcore-jacogr)
+
 ## checking out
 
 - clone repo to get the current version
