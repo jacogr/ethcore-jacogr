@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "5"
+before_script:
+  - npm install -g gulp
+script:
+  - gulp
+after_success:
+  - git config user.name "Travis CI"
+  - git config user.email "jacogr+travis@gmail.com"
+  - git remote add upstream "https://$GH_TOKEN@github.com/jacogr/ethcore-jacogr.git"
+  - git fetch upstream
+  - git reset upstream/gh-pages
+  - git add client.css client.js index.html
+  - git commit -m "[CI skip] push to gh-pages"
+  - git push -q upstream HEAD:gh-pages

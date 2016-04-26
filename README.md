@@ -21,7 +21,7 @@
 - React as a JS framework (overkill here, it could/should be just a static page)
 - Mocha for JS testing
 - ESLint, Sass-lint & pug-lint for static analysis (along with CodeClimate for a GPA of the JS code)
-- Travis for CI, running the tests and building for [http://ethcore-jacogr.github.io](http://ethcore-jacogr.github.io)
+- Travis for CI, running the tests and building for [http://jacogr.github.io/ethcore-jacogr](http://jacogr.github.io/ethcore-jacogr)
 
 ## deviations
 

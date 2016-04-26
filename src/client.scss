@@ -1,0 +1,67 @@
+@import 'bourbon';
+@import 'neat';
+
+$color-foreground: #333;
+$color-background: #fff;
+$color-heading: #666;
+$color-light: #888;
+
+$height-normal: 1.2em;
+$height-small: .75em;
+$height-large: 1.5em;
+$line-ratio: 1.3;
+
+body {
+  background: $color-background;
+  color: $color-foreground;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-size: $height-normal;
+  font-weight: 300;
+  line-height: $height-normal * $line-ratio;
+}
+
+.light {
+  color: $color-heading;
+}
+
+.center {
+  text-align: center;
+}
+
+.section {
+  @include outer-container;
+  margin-bottom: 1.5em;
+
+  .header {
+    border-bottom: 1px solid $color-heading;
+    color: $color-heading;
+    font-size: $height-large;
+    margin-bottom: .5em;
+  }
+
+  .content {
+    .requirement {
+      @include span-columns(12);
+      margin-bottom: .5em;
+
+      .match {
+        @include span-columns(6);
+        color: $color-light;
+      }
+
+      .spec {
+        @include span-columns(6);
+
+        .column {
+          @include span-columns(6);
+        }
+
+        &>.column {
+          &:first-child {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
