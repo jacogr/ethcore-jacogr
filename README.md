@@ -21,11 +21,11 @@
 - React as a JS framework (overkill here, it could/should be just a static page)
 - Mocha for JS testing
 - ESLint, Sass-lint & pug-lint for static analysis (along with CodeClimate for a GPA of the JS code)
-- Travis for CI, running the tests and building for [http://jacogr.github.io/ethcore-jacogr](http://jacogr.github.io/ethcore-jacogr)
+- Travis for CI, running the tests and building for [https://jacogr.github.io/ethcore-jacogr](https://jacogr.github.io/ethcore-jacogr)
 
 ## deviations
 
-The initial supplied JS file (included here as (src/components/ethcore.js)[src/components/ethcore.js]) now exports the jobs structure with `module.exports`. In addition this structure was modified slightly -
+The initial supplied JS file (included here as [src/components/ethcore.js](tree/master/src/components/ethcore.js)) now exports the jobs structure with `module.exports`. In addition this structure was modified slightly -
 
 - eslint ignores added to the top (`new-cap`)
 - `enumerate` function adapted to actually define variables
