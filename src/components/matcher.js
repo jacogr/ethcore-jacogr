@@ -1,5 +1,5 @@
-const requirements = require('./ethcore.js');
-const comments = require('./comments.js');
+const requirements = require('../constants/ethcore.js');
+const comments = require('../constants/comments.js');
 
 const ECSection = require('./section'); // eslint-disable-line no-unused-vars
 
