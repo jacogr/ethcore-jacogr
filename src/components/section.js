@@ -1,10 +1,10 @@
-const createRequirement = function(requirement, status, key) {
+const createRequirement = function(requirement, comment, key) {
   const spec = requirement.$$typeof ? requirement : <div className='spec'>{requirement}</div>;
 
   return (
     <div key={key} className='requirement'>
       {spec}
-      <div className='match'>{status}</div>
+      <div className='match'>{comment}</div>
     </div>
   );
 };
@@ -12,13 +12,13 @@ const createRequirement = function(requirement, status, key) {
 const ECSection = React.createClass({
   render: function() {
     const requirement = this.props.requirement;
-    const status = this.props.status;
+    const comment = this.props.comment;
     const reqType = Object.prototype.toString.call(requirement);
 
-    let detail = createRequirement(requirement, status);
+    let detail = createRequirement(requirement, comment);
 
     if (reqType === '[object Array]') {
-      detail = createRequirement(requirement.join(', '), status);
+      detail = createRequirement(requirement.join(', '), comment);
     } else if (reqType === '[object Object]') {
       detail = Object.keys(requirement).map((subkey) => {
         const infoType = Object.prototype.toString.call(requirement[subkey]);
@@ -40,7 +40,7 @@ const ECSection = React.createClass({
           <div className='spec'>
             <div className='column light'>{subkey}</div>
             <div className='column'>{info}</div>
-          </div>), status && status[subkey], subkey);
+          </div>), comment && comment[subkey], subkey);
       });
     }
 
