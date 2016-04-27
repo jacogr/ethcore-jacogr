@@ -2,7 +2,7 @@
 @import 'neat';
 
 $color-foreground: #333;
-$color-background: #fff;
+$color-background: rgba(255, 255, 255, 0.95);
 $color-heading: #666;
 $color-light: #888;
 
@@ -12,12 +12,16 @@ $height-large: 1.5em;
 $line-ratio: 1.3;
 
 body {
-  background: $color-background;
+  background: url('images/jaco.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: $color-foreground;
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   font-size: $height-normal;
   font-weight: 300;
   line-height: $height-normal * $line-ratio;
+  margin: 0;
 }
 
 .light {
@@ -28,9 +32,14 @@ body {
   text-align: center;
 }
 
+.container {
+  background: $color-background;
+  margin-top: 15em;
+}
+
 .section {
   @include outer-container;
-  margin-bottom: 1.5em;
+  padding: 1.5em 0;
 
   .header {
     border-bottom: 1px solid $color-heading;
