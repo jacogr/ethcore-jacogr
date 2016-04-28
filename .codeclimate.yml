@@ -3,6 +3,11 @@ engines:
     enabled: true
   csslint:
     enabled: true
+ratings:
+  paths:
+    - src/**/*.js
+exclude_paths:
+  - src/**/*.spec.js
 ecmaFeatures:
   modules: true
   jsx: true
