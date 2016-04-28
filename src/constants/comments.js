@@ -1,4 +1,5 @@
 module.exports = {
+  headline: 'A full-stack developer with a good sense of design, having a wide range of experience that always puts the client needs first.',
   essentials: {
     locations: 'Interested in working in Germany, please see remote location comments later on as well as to my whys for looking around.',
     employment: 'Perfect.',
@@ -8,6 +9,8 @@ module.exports = {
     companysize: 'Brilliant. Be small, move fast, do things that matter.',
     teamsize: 'I would expect a minium of 2 (obsiously depends on where the process is), single-points of failures are not advisable.'
   },
+  specs: {},
+  profile: {},
   methodology: {
     codereviews: '100%, nobody knows everything and alignment is critical.',
     prototyping: 'Along with failfast, rather invest small block of time before jumping in heads over heels.',
@@ -35,5 +38,7 @@ module.exports = {
     frameworks: 'Biggest strength is on AngularJS (extensive 1.x, no production 2.x experience) and have been using Polymer and React (as in this project) lately to expand my horizons. Apart from my initial JSX knee-jerk, the latter has been quite good, not without its warts, but productive. Familiar with Meteor, however have never viewed it as a real-contender, rather as a slightly-less attractive approach.',
     p2p: 'I have not had the pleasure of writing my own p2p implementation yet, however understand how, why and how, be it Napster, Bittorrent or Whisper.',
     ethereum: ''
-  }
+  },
+  other: 'Changing the world is exactly the reason why I want to sign up - work where you can have the largest impact.',
+  misc: {}
 };

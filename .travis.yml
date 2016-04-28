@@ -1,8 +1,7 @@
 language: node_js
 node_js:
   - "5"
-before_script:
-  - npm install -g gulp
 script:
-  - gulp
+  - npm build
+  - npm test
   - bash bin/deploy-gh-pages.sh

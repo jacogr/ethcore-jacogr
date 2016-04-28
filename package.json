@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "gulp",
-    "test": "gulp test"
+    "test": "mocha --compilers js:babel-register src/**/*.spec.js"
   },
   "keywords": [
     "Ethereum",
@@ -37,6 +37,8 @@
     "gulp-sass": "^2.3.1",
     "gulp-sass-lint": "^1.1.1",
     "gulp-uglify": "^1.5.3",
+    "jsdom": "^8.4.0",
+    "mocha": "^2.4.5",
     "pug": "^2.0.0-alpha6",
     "uglifyify": "^3.0.1",
     "vinyl-source-stream": "^1.1.0"
