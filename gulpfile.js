@@ -6,6 +6,9 @@ const browserify = require('browserify');
 const cleancss = require('gulp-clean-css');
 const eslint = require('gulp-eslint');
 const gulp = require('gulp');
+const injectModules = require('gulp-inject-modules');
+const istanbul = require('gulp-babel-istanbul');
+const mocha = require('gulp-mocha');
 const path = require('path');
 const pug = require('gulp-pug');
 const puglint = require('gulp-pug-lint');
@@ -13,10 +16,6 @@ const sass = require('gulp-sass');
 const sasslint = require('gulp-sass-lint');
 const source = require('vinyl-source-stream');
 const uglifyify = require('uglifyify');
-
-const injectModules = require('gulp-inject-modules');
-const istanbul = require('gulp-babel-istanbul');
-const mocha = require('gulp-mocha');
 
 const onErrorCallback = function(error) {
   console.error(error.stack || error.message || error);
