@@ -1,6 +1,3 @@
-const expect = require('chai').expect;
-global.moment = require('moment');
-
 const formatter = require('./formatter');
 
 describe('mixins/formatter', () => {

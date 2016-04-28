@@ -51,7 +51,7 @@ gulp.task('css', () => {
   const nm = path.join(__dirname, '/node_modules'); // eslint-disable-line no-undef
 
   return gulp
-    .src(['src/**/*.scss'])
+    .src(['src/styles/**/*.scss'])
     .pipe(sass({
       indentedSyntax: false,
       sourceComments: 'normal',
@@ -68,7 +68,7 @@ gulp.task('css', () => {
 
 gulp.task('html', () => {
   return gulp
-    .src(['src/**/*.jade'])
+    .src(['src/pages/**/*.jade'])
     .pipe(pug())
     .on('error', onErrorCallback)
     .pipe(gulp.dest('.'));
@@ -77,7 +77,7 @@ gulp.task('html', () => {
 gulp.task('js', () => {
   return browserify(
     {
-      entries: ['./src/client.js'],
+      entries: ['./src/scripts/client.js'],
       debug: false,
       detectGlobals: true,
       bundleExternal: false,
@@ -118,7 +118,9 @@ gulp.task('test', (doneCallback) => {
         .src('src/**/*.spec.js')
         .pipe(babel())
         .pipe(injectModules())
-        .pipe(mocha())
+        .pipe(mocha({
+          require: ['./src/scripts/setup.spec.js']
+        }))
         .pipe(istanbul.writeReports({
           dir: './coverage',
           reporters: ['lcov', 'json', 'text'],

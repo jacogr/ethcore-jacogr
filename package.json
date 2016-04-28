@@ -46,6 +46,9 @@
     "mocha": "^2.4.5",
     "moment": "^2.13.0",
     "pug": "^2.0.0-alpha6",
+    "react": "^15.0.1",
+    "react-addons-test-utils": "^15.0.1",
+    "react-dom": "^15.0.1",
     "uglifyify": "^3.0.1",
     "vinyl-source-stream": "^1.1.0"
   }

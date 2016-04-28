@@ -1,9 +1,9 @@
 {
   "parser": "babel-eslint",
   "globals": {
-    "console": false,
     "afterEach": false,
     "beforeEach": false,
+    "console": false,
     "describe": false,
     "document": false,
     "expect": false,
