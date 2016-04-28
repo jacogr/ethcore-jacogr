@@ -18,11 +18,11 @@
 
 ## getting to grips with the code
 
-- [src/pages](tree/master/src/pages) The Jade files that compiles down to HTML
-- [src/styles](tree/master/src/styles) The Sass files that compiles down to CSS
-- [src/scripts/components](tree/master/src/scripts/components) React components for the various UI elements
-- [src/scripts/constants](tree/master/src/scripts/constants) Both the requirements and overall comments
-- [src/scripts/mixins](tree/master/src/scripts/mixins) Mixins, only used for the global formatter
+- [src/pages](src/pages) The Jade files that compiles down to HTML
+- [src/styles](src/styles) The Sass files that compiles down to CSS
+- [src/scripts/components](src/scripts/components) React components for the various UI elements
+- [src/scripts/constants](src/scripts/constants) Both the requirements and overall comments
+- [src/scripts/mixins](src/scripts/mixins) Mixins, only used for the global formatter
 
 ## tools used
 
@@ -51,7 +51,7 @@
 
 ## deviations
 
-The initial supplied JS file (included here as [src/scripts/constants/ethcore.js](tree/master/src/scripts/constants/ethcore.js)) now exports the jobs structure with `module.exports`. In addition this structure was modified slightly -
+The initial supplied JS file (included here as [src/scripts/constants/ethcore.js](src/scripts/constants/ethcore.js)) now exports the jobs structure with `module.exports`. In addition this structure was modified slightly -
 
 - eslint ignores added to the top (`new-cap`)
 - `enumerate` function adapted to actually define variables
