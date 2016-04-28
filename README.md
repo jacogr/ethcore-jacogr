@@ -18,17 +18,28 @@
 
 ## tools used
 
+### development
+
 - Mac OS X
 - Atom.io editor (all the lovely code highlighting for the web languages)
+
+### frameworks & building
+
 - Gulp as the overall build tool
 - Pug (ex Jade) for the HTML pages (who really wants to type <> all day... until we get to JSX that is)
 - SASS for the CSS pre-processor (variables, nesting, includes, CSS is code too after all) with cssclean to minify
 - Babel for ES2015 -> ES5 compilation (via browserify) and uglify to minify
 - React as a JS framework (overkill here, it could/should be just a static page)
-- Mocha for JS testing
-- ESLint, Sass-lint & pug-lint for static analysis
-- Travis for CI, running the tests and building for [https://jacogr.github.io/ethcore-jacogr](https://jacogr.github.io/ethcore-jacogr)
-- CodeClimate to do analysis (ESLint & GPA) and report on coverage (normally the go-to tool for the latter is Coveralls.io)
+
+### testing
+
+- Mocha with JSDOM for JS testing
+- [Travis](https://travis-ci.org/jacogr/ethcore-jacogr) for CI, running the tests, building and deploying [https://jacogr.github.io/ethcore-jacogr](https://jacogr.github.io/ethcore-jacogr)
+
+### code analysis
+
+- ESLint, Sass-lint & pug-lint for static analysis (local, `gulp lint`)
+- [CodeClimate](https://codeclimate.com/github/jacogr/ethcore-jacogr) to do analysis (ESLint & GPA) and report on coverage (normally the go-to tool for the latter is Coveralls.io)
 
 ## deviations
 
