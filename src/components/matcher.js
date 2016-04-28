@@ -6,12 +6,15 @@ const ECSection = require('./section'); // eslint-disable-line no-unused-vars
 const ECMatcher = React.createClass({
   render: function() {
     return (
-      <div className='container'>
-        {Object.keys(requirements).map((key) => {
-          return (
-            <ECSection key={key} header={key} requirement={requirements[key]} comment={comments[key]} />
-          );
-        })}
+      <div className='page'>
+        <div className='intro'></div>
+        <div className='container'>
+          {Object.keys(requirements).map((key) => {
+            return (
+              <ECSection key={key} header={key} requirement={requirements[key]} comment={comments[key]} />
+            );
+          })}
+        </div>
       </div>
     );
   }
