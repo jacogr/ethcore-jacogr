@@ -39,7 +39,11 @@ module.exports = {
     relocationpackage: 'Not needed.'
   },
   profile: {
-
+    newfeatures: 'Happy to see this here as (currently) the biggest area. I am better changing the world radiacally, than doing it incrementally.',
+    clientsupport: 'The only way to truely learn is from clients. Without them pushing through feedback and without them using the products, we have nothing. The closer you are to your clients (in my experience), the better the actual outputs.',
+    documentation: 'Exceptionally important, however not always the most plesant task to complete.',
+    maintenance: 'This will increase over time.',
+    meetings: 'Good starting point.'
   },
   equipment: {
     operatingsystem: 'Currently a Mac OS X user. Prior to that have been using Linux as a desktop OS since 1996, however when I finally got my hands on a Mac Mini G5 with BSD under-the-hood, I have not looked back.',
@@ -65,7 +69,7 @@ module.exports = {
     cryptography: 'Once again, no expert. I know enough that I am not duped by Ethereum using Keccak256 (as opposed to SHA3), know where to find best-practices (and why it is a bad idea to try and implement this yourself). Concious incompetence, I do not have the skills or background to be hardcore in this.',
     boardgames: 'The tales of a misspent youth. Here I only put myself on the casual track, if I had to work on the AlphaGo team, I would not be an MVP.'
   },
-  other: 'Changing the world is exactly the reason why I want to sign up - work where you can have the largest impact. When something is worth doing, it is worth doing right.',
+  other: 'Changing the world is exactly the reason why I want to sign up - work where you can have the largest impact. When something is worth doing, it is worth doing right. If there is space for a new Vibram-wearing member of the team, count me in.',
   misc: {
     training: 'My view is that this is the best approach, I have yet to receive weeks-long formal training that yielded the same outputs as the inputs.',
     fossphilosophy: 'I have seen this approach with Parity and must say that it does seem to be working exceptionally well.',
