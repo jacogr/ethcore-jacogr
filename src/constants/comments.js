@@ -14,8 +14,8 @@ module.exports = {
     prototyping: 'Along with failfast, rather invest small block of time before jumping in heads over heels.',
     pairprogramming: 'Two heads are better than one.',
     failfast: 'On-board.',
-    unittests: 'This is actually one of the things that attracts me (having followed Parity on GithHub since the public annoucement) - quality is being taken seriously.',
-    integrationtests: 'The inputs/outputs are always the fragily systems parts.',
+    unittests: 'This is actually one of the things that attracts me (having followed Parity on GithHub since the public annoucement) - quality is being taken seriously throughout.',
+    integrationtests: 'The inputs/outputs are always the fragile systems parts.',
     buildserver: 'Have a lot of experience with CircleCI (slightly cheaper for paid accounts than Travis), however with this project took the Travis route. Different configuration and usage options in the yml config, however a CI is a CI...',
     staticcodeanalysis: 'For JavaScript CodeClimate does work wonders, although (by default) they rely on jshint as opposed to eslint (their engine config is not quite optimal yet for the latter). Combine that with a local ESLint/Sass-Lint/Pug-Lint and coding can be checked for the multiple style and other issues.',
     versioncontrol: 'Not expecting anything else.',
@@ -24,13 +24,27 @@ module.exports = {
     standups: 'On-board.',
     qaprotocol: 'I do like the approach followed with Parity, less garbage in, less garbage out.',
     agilemanagement: 'No frills overhead, allowing for greater focus.',
-    onecommandbuild: 'Unfortunately too many in this space leave out rigour when building, yes, a proper build (HTML, JS, CSS, etc.) is critical. Very happy to see this here. It may be \'just JS\', but it is coding, best-practices should apply.'
+    freedomovertools: 'Some are more productive in vim, some in emacs and yet others using nothing more than a toaster.',
+    onecommandbuild: 'Unfortunately too many in this space leave out rigour when building, yes, a proper build (HTML, JS, CSS, etc.) is critical. Very happy to see this here. It may be \'just JS\', but it is coding, best-practices should apply.',
+    quickstart: 'Drinking from the fire hydrant that is Ethcore.',
+    commitondayone: 'Perfect.'
   },
-  specs: {},
-  profile: {},
+  specs: {
+    workload: 'Do what you love, love what you do - the workload becomes something that is not thought about.',
+    workweek: 'Standard.',
+    holidays: 'On-par.',
+    corehours: 'Makes sense, catering for both the early risers and later sleepers.',
+    travel: 'When the travel makes sense from a business perspective, the fit is there.',
+    remote: 'I am currently working in South Africa with a view to move to Germany to join my girfriend and new baby daughter. Most things you can do via the internet (I am well-versed in remote work from Germany, Canada and other places), being a proper parent is not one of them. Currently we are open to locations, however current location in Germany is closer to Amsterdam than Berlin.',
+    relocationpackage: 'Not needed.'
+  },
+  profile: {
+
+  },
   equipment: {
     operatingsystem: 'Currently a Mac OS X user. Prior to that have been using Linux as a desktop OS since 1996, however when I finally got my hands on a Mac Mini G5 with BSD under-the-hood, I have not looked back.',
-    computer: 'Thin, light, portable with enough memory and a long battery life.'
+    computer: 'Thin, light, portable with enough memory and a long battery life.',
+    monitors: 'A single external screen is fine, for some reason I always default to using just the laptop display.'
   },
   technologies: {
     css3: 'I can hold my own. As with the rest in this section, an \'Expert\' label always leads me to being uncomfortable - there are always people better (I have seen some real wizards) and the more you know, the more you reliase you still need to learn.',
@@ -44,8 +58,24 @@ module.exports = {
     testing: 'Mocha (server-side) and Mocha with Karma (client side) really rules the roost. For end-to-end integration Selenium (exposure via Angular\'s Protractor) does work wonders, although it can be quite difficult to maintain longer-term.',
     frameworks: 'Biggest strength is on AngularJS (extensive 1.x, no production 2.x experience) and have been using Polymer and React (as in this project) lately to expand my horizons. Apart from my initial JSX knee-jerk, the latter has been quite good, not without its warts, but productive. Familiar with Meteor, however have never viewed it as a real-contender, rather as a slightly-less attractive approach.',
     p2p: 'I have not had the pleasure of writing my own p2p implementation yet, however understand how, why and how, be it Napster, Bittorrent or Whisper.',
-    ethereum: ''
+    ethereum: 'Yes, yes and yes. Make no mistake, I am no Vitalik, but still believe this is going to change the world around us. I guess I took a crypto break at exactly the wrong time, I wish I got involved even earlier.',
+    blockchain: 'As a distributed Excel, I am familiar with it, from a coding perspective I only have experience with Ethereum contracts, the Ethereum RPC interfaces and most things Ethereum related.',
+    server: 'I used to be a C++ advocate in the days when interpreted languages and garbage collection was still frowned-upon. In addition I am familiar with Ruby (not Rails as much) and used to be able to wrangle the Python serpernt with the best of them. Alas, no-use have gotten in the way. Rust and Go are on my 2016 \'learn and play with\' list, sadly I am a bit behind since I got into Ethereum - and there is only so much time to play.',
+    gametheory: 'I am familiar with the basics (I love reading), however from a pure mathematical viewpoint, I am nowhere. Yes, a lot of this forms the backbone of the industry, so I guess my knowledge is just enought to be dangerous.',
+    cryptography: 'Once again, no expert. I know enough that I am not duped by Ethereum using Keccak256 (as opposed to SHA3), know where to find best-practices (and why it is a bad idea to try and implement this yourself). Concious incompetence, I do not have the skills or background to be hardcore in this.',
+    boardgames: 'The tales of a misspent youth. Here I only put myself on the casual track, if I had to work on the AlphaGo team, I would not be an MVP.'
   },
-  other: 'Changing the world is exactly the reason why I want to sign up - work where you can have the largest impact.',
-  misc: {}
+  other: 'Changing the world is exactly the reason why I want to sign up - work where you can have the largest impact. When something is worth doing, it is worth doing right.',
+  misc: {
+    training: 'My view is that this is the best approach, I have yet to receive weeks-long formal training that yielded the same outputs as the inputs.',
+    fossphilosophy: 'I have seen this approach with Parity and must say that it does seem to be working exceptionally well.',
+    codingretreats: 'A fair warning - I am both a terrible snowboarder and a terrible skier, some things are better learnt when in your 20\'s.',
+    conferences: 'If it adds value to the day-to-day and the future, I am all-in.',
+    teamevents: 'Have fun together, change the world together.',
+    healthcare: 'Brilliant.',
+    mobilephone: 'Understandable.',
+    kitchen: 'Perfect.',
+    canteen: 'Perfect.',
+    freestuff: 'Just enough to keep the gremlins at bay with in-office fun.'
+  }
 };
