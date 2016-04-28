@@ -7,8 +7,8 @@ const ECSectionMixin = {
     return moment(date).format('Do MMMM YYYY').toLowerCase();
   },
 
-  formatHours: function(time) {
-    return `${time / (60 * 60)}h`;
+  formatHours: function(seconds) {
+    return `${seconds / (60 * 60)}h`;
   },
 
   formatNumber: function(number) {
