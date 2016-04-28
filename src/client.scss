@@ -7,7 +7,7 @@ body {
   background-attachment: fixed;
   background-image: url('images/jaco.jpg');
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   color: $color-foreground;
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   font-size: $height-normal;
@@ -28,16 +28,16 @@ body {
   position: relative;
 
   &:after {
-    content: '';
     background-image: url('images/ethcore-logo-white-square.png');
     background-position: right top;
     background-repeat: no-repeat;
     background-size: auto 10em;
-    top: 6em;
-    right: 6em;
-    left: 0;
     bottom: 0;
+    content: '';
+    left: 0;
     position: absolute;
+    right: 6em;
+    top: 6em;
   }
 }
 
