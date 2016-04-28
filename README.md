@@ -57,4 +57,9 @@ The initial supplied JS file (included here as [src/components/ethcore.js](tree/
 ## naughty, naughty
 
 - No PRs made, i.e. direct pushes to master (instead of merges) - yes, I know, no excuses, although merging and cheking own work does sound a bit, erm, not right
+- This is probably (not probably, it is) very much overkill since we could do the same with static rendered HTML. (Well, the JS does allow us to do some nicer rendering on-demand.) At the same point, it does prove some basics that s useful for larger projects
+- Honestly we don't really need a Page and Into and Sections... it used to be flatter, but for the sake of components...
+- Coverage could be very misleading since it actually displays the percentage of files you attempt to cover, not all files. So if you only wrote tests for a small file and have no `*.spec.js` for any others, it will be scewed.
+- Really should have sorted out the CodeClimate 'issues' (quote-unquote), however these are actually due to CodeClimate using an older version of ESLint
+- There are some borderline stupid tests, i.e. sections doesn't actually check that it contains a list of sections
 - ...

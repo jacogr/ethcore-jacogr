@@ -1,3 +1,3 @@
-const ECMatcher = require('./components/matcher'); // eslint-disable-line no-unused-vars
+const Page = require('./components/page'); // eslint-disable-line no-unused-vars
 
-ReactDOM.render(<ECMatcher />, document.getElementById('content'));
+ReactDOM.render(<Page />, document.getElementById('content'));

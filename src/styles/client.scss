@@ -60,16 +60,17 @@ body {
   .large {
     font-size: $height-xlarge;
 
-    padding-bottom: 1em;
+    padding-bottom: .25em;
   }
 
-  .normal {
+  .normal,
+  .url {
     font-size: $height-large;
     padding: .2em 0;
+  }
 
-    &.spaced {
-      margin-bottom: .75em;
-    }
+  .normal+.url {
+    margin-top: .75em;
   }
 
   a {
@@ -84,7 +85,7 @@ body {
   }
 }
 
-.container {
+.sections {
   background-color: $color-background;
   padding: 2.5em 0;
 }
