@@ -1,5 +1,5 @@
 module.exports = {
-  headline: 'A full-stack developer with a good sense of design, having a wide range of experience that always puts the client needs first.',
+  headline: 'A good sense of design with a wide range of experience that always puts the client needs first.',
   essentials: {
     locations: 'Interested in working in Germany, please see remote location comments later on as well as to my whys for looking around.',
     employment: 'Perfect.',
@@ -9,18 +9,25 @@ module.exports = {
     companysize: 'Brilliant. Be small, move fast, do things that matter.',
     teamsize: 'I would expect a minium of 2 (obsiously depends on where the process is), single-points of failures are not advisable.'
   },
-  specs: {},
-  profile: {},
   methodology: {
     codereviews: '100%, nobody knows everything and alignment is critical.',
     prototyping: 'Along with failfast, rather invest small block of time before jumping in heads over heels.',
     pairprogramming: 'Two heads are better than one.',
     failfast: 'On-board.',
     unittests: 'This is actually one of the things that attracts me (having followed Parity on GithHub since the public annoucement) - quality is being taken seriously.',
+    integrationtests: 'The inputs/outputs are always the fragily systems parts.',
     buildserver: 'Have a lot of experience with CircleCI (slightly cheaper for paid accounts than Travis), however with this project took the Travis route. Different configuration and usage options in the yml config, however a CI is a CI...',
-    staticcodeanalysis: 'For JavaScript CodeClimate does work wonders, although (by default) they rely on jshint as opposed to eslint (their engine config is not quite optimal yet for the latter). Combine that with a local ESLint and coding can be checked for the simpler issues.',
+    staticcodeanalysis: 'For JavaScript CodeClimate does work wonders, although (by default) they rely on jshint as opposed to eslint (their engine config is not quite optimal yet for the latter). Combine that with a local ESLint/Sass-Lint/Pug-Lint and coding can be checked for the multiple style and other issues.',
+    versioncontrol: 'Not expecting anything else.',
+    issuetracker: 'Especially with Kanban, other lightweight tools (where not interfacing with the public), could be useful, e.g. Trello or PivotalTracker.',
+    knowledgerepo: 'Perfect.',
+    standups: 'On-board.',
+    qaprotocol: 'I do like the approach followed with Parity, less garbage in, less garbage out.',
+    agilemanagement: 'No frills overhead, allowing for greater focus.',
     onecommandbuild: 'Unfortunately too many in this space leave out rigour when building, yes, a proper build (HTML, JS, CSS, etc.) is critical. Very happy to see this here. It may be \'just JS\', but it is coding, best-practices should apply.'
   },
+  specs: {},
+  profile: {},
   equipment: {
     operatingsystem: 'Currently a Mac OS X user. Prior to that have been using Linux as a desktop OS since 1996, however when I finally got my hands on a Mac Mini G5 with BSD under-the-hood, I have not looked back.',
     computer: 'Thin, light, portable with enough memory and a long battery life.'

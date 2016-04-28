@@ -7,7 +7,13 @@ const ECMatcher = React.createClass({
   render: function() {
     return (
       <div className='page'>
-        <div className='intro'></div>
+        <div className='intro'>
+          <div className='large'>Jaco Greeff</div>
+          <div className='normal'>This one is too good to pass up and too impactful to let slide.</div>
+          <div className='normal spaced'>Nothing ventured, nothing gained.</div>
+          <div className='normal'><a href='http://jacogr.github.io/cv'>http://jacogr.github.io/cv</a> (Full CV)</div>
+          <div className='normal'><a href='http://theblock.github.io/'>http://theblock.github.io</a> (Ethereum playground)</div>
+        </div>
         <div className='container'>
           {Object.keys(requirements).map((key) => {
             return (

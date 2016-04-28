@@ -9,7 +9,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: $color-foreground;
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-family: $font-normal;
   font-size: $height-normal;
   font-weight: 300;
   line-height: $height-normal * $line-ratio;
@@ -25,6 +25,15 @@ body {
 }
 
 .page {
+
+}
+
+.intro {
+  color: $color-light;
+  font-family: $font-cursive;
+  height: 22em;
+  padding: 4em 6em 0;
+
   position: relative;
 
   &:after {
@@ -38,12 +47,45 @@ body {
     position: absolute;
     right: 6em;
     top: 6em;
+    z-index: -1;
   }
-}
 
-.intro {
-  background: $color-background-intro;
-  height: 22em;
+  &:before {
+    background: $color-background-intro;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -2;
+  }
+
+  .large {
+    font-size: $height-xlarge;
+
+    padding-bottom: 1em;
+  }
+
+  .normal {
+    font-size: $height-large;
+    padding: .2em 0;
+
+    &.spaced {
+      margin-bottom: 0.75em;
+    }
+  }
+
+  a {
+    color: inherit;
+    cursor: pointer;
+
+    &:visited,
+    &:hover,
+    &:active {
+      color: inherit;
+    }
+  }
 }
 
 .container {
@@ -69,7 +111,7 @@ body {
       .match {
         @include span-columns(7);
         color: $color-light;
-        font-family: 'Reenie Beanie', cursive;
+        font-family: $font-cursive;
         font-size: $height-cursive;
       }
 
