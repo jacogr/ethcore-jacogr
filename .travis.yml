@@ -3,6 +3,5 @@ node_js:
   - "5"
 script:
   - gulp
-  - gulp test
-  - ./node_modules/.bin/codeclimate-test-reporter < coverage/lcov.info
+  - gulp coverage
   - bash bin/deploy-gh-pages.sh

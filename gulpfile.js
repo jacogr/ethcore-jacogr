@@ -5,6 +5,7 @@ const babelify = require('babelify');
 const browserify = require('browserify');
 const cleancss = require('gulp-clean-css');
 const eslint = require('gulp-eslint');
+const exec = require('child_process').exec;
 const gulp = require('gulp');
 const injectModules = require('gulp-inject-modules');
 const istanbul = require('gulp-babel-istanbul');
@@ -21,6 +22,30 @@ const onErrorCallback = function(error) {
   console.error(error.stack || error.message || error);
   this.emit('end');
 };
+
+gulp.task('coverage', ['test'], (doneCallback) => {
+  const _nonewline = function(str) {
+    return str.replace(/\n/, '').replace(/\r/, '');
+  };
+
+  const lcov = path.join(process.cwd(), 'coverage/lcov.info');
+  const bin = path.join(process.cwd(), 'node_modules/.bin/codeclimate-test-reporter');
+
+  const proc = exec([bin, '<', lcov].join(' '), (error) => {
+    if (error) {
+      console.error(error);
+    }
+    doneCallback(error);
+  });
+
+  proc.stdout.on('data', (data) => {
+    console.log(_nonewline(data));
+  });
+
+  proc.stderr.on('data', (data) => {
+    console.error(_nonewline(data));
+  });
+});
 
 gulp.task('css', () => {
   const nm = path.join(__dirname, '/node_modules'); // eslint-disable-line no-undef

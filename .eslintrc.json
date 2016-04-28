@@ -9,6 +9,7 @@
     "expect": false,
     "global": false,
     "it": false,
+    "process": false,
     "require": false,
     "React": false,
     "ReactDOM": false,
