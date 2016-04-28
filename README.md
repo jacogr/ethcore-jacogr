@@ -16,6 +16,14 @@
 - `gulp` to build the source (alternatively use `npm run build`)
 - `gulp test` to run the tests (alternatively use `npm test`)
 
+## getting to grips with the code
+
+- [src/pages](tree/master/src/pages) The Jade files that compiles down to HTML
+- [src/styles](tree/master/src/styles) The Sass files that compiles down to CSS
+- [src/scripts/components](tree/master/src/scripts/components) React components for the various UI elements
+- [src/scripts/constants](tree/master/src/scripts/constants) Both the requirements and overall comments
+- [src/scripts/mixins](tree/master/src/scripts/mixins) Mixins, only used for the global formatter
+
 ## tools used
 
 ### development
@@ -43,7 +51,7 @@
 
 ## deviations
 
-The initial supplied JS file (included here as [src/components/ethcore.js](tree/master/src/components/ethcore.js)) now exports the jobs structure with `module.exports`. In addition this structure was modified slightly -
+The initial supplied JS file (included here as [src/scripts/constants/ethcore.js](tree/master/src/scripts/constants/ethcore.js)) now exports the jobs structure with `module.exports`. In addition this structure was modified slightly -
 
 - eslint ignores added to the top (`new-cap`)
 - `enumerate` function adapted to actually define variables
@@ -58,8 +66,8 @@ The initial supplied JS file (included here as [src/components/ethcore.js](tree/
 
 - No PRs made, i.e. direct pushes to master (instead of merges) - yes, I know, no excuses, although merging and cheking own work does sound a bit, erm, not right
 - This is probably (not probably, it is) very much overkill since we could do the same with static rendered HTML. (Well, the JS does allow us to do some nicer rendering on-demand.) At the same point, it does prove some basics that s useful for larger projects
-- Honestly we don't really need a Page and Into and Sections... it used to be flatter, but for the sake of components...
-- Coverage could be very misleading since it actually displays the percentage of files you attempt to cover, not all files. So if you only wrote tests for a small file and have no `*.spec.js` for any others, it will be scewed.
+- Honestly we don't really need a Page and Intro and Sections... it used to be flatter, but when you have a hammer, everything starts looking like a nail. Great for re-usable CV and job sites, not so much as a once-off.
+- Coverage could be very misleading since it actually displays the percentage of files you attempt to cover, not all `**/*.js` files. So if you only wrote tests for a small file and have no `**/*.spec.js` for any others, it will be skewed.
 - Really should have sorted out the CodeClimate 'issues' (quote-unquote), however these are actually due to CodeClimate using an older version of ESLint
 - There are some borderline stupid tests, i.e. sections doesn't actually check that it contains a list of sections
 - ...
