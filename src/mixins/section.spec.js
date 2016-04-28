@@ -44,10 +44,6 @@ describe('mixins/section', () => {
         expect(section.formatEntry('startdate', 1461827495755)).to.equal('28th april 2016');
       });
 
-      it('formats amount', () => {
-        expect(section.formatEntry('amount', 12345678)).to.equal('12,345,678');
-      });
-
       it('formats currency', () => {
         expect(section.formatEntry('currency', 'EUR')).to.equal('eur');
       });
@@ -59,6 +55,28 @@ describe('mixins/section', () => {
 
       it('formats the workweek', () => {
         expect(section.formatEntry('workweek', 40 * 60 * 60)).to.equal('40h');
+      });
+    });
+
+    describe('object types', () => {
+      it('formats booleans into yes/no', () => {
+        expect(section.formatEntry('bool', true)).to.equal('yes');
+        expect(section.formatEntry('bool', false)).to.equal('no');
+      });
+
+      it('formats number groupings', () => {
+        expect(section.formatEntry('number', 123)).to.equal('123');
+        expect(section.formatEntry('number', 12345678)).to.equal('12,345,678');
+      });
+    });
+
+    describe('special-case strings', () => {
+      it('formats GitHubWiki correctly', () => {
+        expect(section.formatEntry('github', 'GitHubWiki')).to.equal('github wiki');
+      });
+
+      it('formats MacOSX correctly', () => {
+        expect(section.formatEntry('mac', 'MacOSX')).to.equal('mac os x');
       });
     });
   });

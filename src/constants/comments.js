@@ -4,7 +4,7 @@ module.exports = {
     locations: 'Interested in working in Germany, please see remote location comments later on as well as to my whys for looking around.',
     employment: 'Perfect.',
     startdate: 'As soon as possible is great, I do however have a 2 month notice period. As they say, good things come to those who wait.',
-    salary: 'Without beating around the bush, this is quite a it below my range and experience. Negotiation is on the table, I know that I can bring more than you planned for, resulting in a win-win. What about some part in ETH? (Saves me investing each month via the Fiat -> BTC -> ETH bridges)',
+    salary: 'Without beating around the bush, this is quite a it below my range and experience. Negotiation is on the table, I know that I can bring more than you planned for, resulting in a win-win. What about some part in ETH?',
     industry: 'I have been involved with Bitcoin as an buyer since late 2012 (having dimissed it totally in 2010). As for Ethereum, actually stumbled across it only in Jan 2016 after I wanted to write some Bitcoin gambling site... Well, I have been hooked since, contracts, interfaces - not enough to satisfy the learning appetite, but enough to keep me sane.',
     companysize: 'Brilliant. Be small, move fast, do things that matter.',
     teamsize: 'I would expect a minium of 2 (obsiously depends on where the process is), single-points of failures are not advisable.'

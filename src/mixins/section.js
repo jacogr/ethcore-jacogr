@@ -26,8 +26,6 @@ const ECSectionMixin = {
     // specific key formatting
     if (key === 'startdate') {
       return this.formatDate(entry);
-    } else if (key === 'amount') {
-      return this.formatNumber(entry);
     } else if (key === 'currency') {
       return entry.toLowerCase();
     } else if (key === 'from' || key === 'to') {
@@ -40,14 +38,14 @@ const ECSectionMixin = {
     if (type === '[object Boolean]') {
       return this.formatBoolean(entry);
     } else if (type === '[object Number]') {
-      return entry;
-    }
-
-    // special case for mid-capital strings
-    if (/^GitHub/.test(entry)) {
-      entry = entry.replace('GitHub', 'Github');
-    } else if (/^MacOSX/.test(entry)) {
-      entry = entry.replace('MacOSX', 'MacOsX');
+      return this.formatNumber(entry);
+    } else if (type === '[object String]') {
+      // special case for mid-capital strings
+      if (/^GitHub/.test(entry)) {
+        entry = entry.replace('GitHub', 'Github');
+      } else if (/^MacOSX/.test(entry)) {
+        entry = entry.replace('MacOSX', 'MacOsX');
+      }
     }
 
     return entry.split(/(?=[A-Z])/).join(' ').toLowerCase();

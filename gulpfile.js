@@ -1,5 +1,6 @@
 'use strict';
 
+const babel = require('gulp-babel');
 const babelify = require('babelify');
 const browserify = require('browserify');
 const cleancss = require('gulp-clean-css');
@@ -12,6 +13,10 @@ const sass = require('gulp-sass');
 const sasslint = require('gulp-sass-lint');
 const source = require('vinyl-source-stream');
 const uglifyify = require('uglifyify');
+
+const injectModules = require('gulp-inject-modules');
+const istanbul = require('gulp-babel-istanbul');
+const mocha = require('gulp-mocha');
 
 const onErrorCallback = function(error) {
   console.error(error.stack || error.message || error);
@@ -77,6 +82,26 @@ gulp.task('sass-lint', () => {
     .src(['src/**/*.scss'])
     .pipe(sasslint())
     .pipe(sasslint.format());
+});
+
+gulp.task('test', (doneCallback) => {
+  gulp
+    .src(['src/**/*.js', '!src/**/*.spec.js'])
+    .pipe(istanbul())
+    .pipe(istanbul.hookRequire()) // or you could use .pipe(injectModules())
+    .on('finish', function() {
+      gulp
+        .src('src/**/*.spec.js')
+        .pipe(babel())
+        .pipe(injectModules())
+        .pipe(mocha())
+        .pipe(istanbul.writeReports({
+          dir: './coverage',
+          reporters: ['lcov', 'json', 'text'],
+          reportOpts: { dir: './coverage' }
+        }))
+        .on('end', doneCallback);
+    });
 });
 
 gulp.task('lint', ['js-lint', 'pug-lint', 'sass-lint']);

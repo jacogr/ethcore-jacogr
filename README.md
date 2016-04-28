@@ -12,9 +12,9 @@
 ## checking out
 
 - clone repo to get the current version
-- `npm install` to install the dependent Node packages (building)
+- `npm install` to install the dependent Node packages (required for building & testing)
 - `gulp` to build the source (alternatively use `npm run build`)
-- `gulp test` to run the tests (alternatively use `npm run test`)
+- `gulp test` to run the tests (alternatively use `npm test`)
 
 ## tools used
 
