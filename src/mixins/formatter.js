@@ -1,4 +1,4 @@
-const ECSectionMixin = {
+const FormatterMixin = {
   formatBoolean: function(boolean) {
     return boolean ? 'yes' : 'no';
   },
@@ -55,47 +55,7 @@ const ECSectionMixin = {
     return entries.map((entry) => {
       return this.formatEntry(type, entry);
     });
-  },
-
-  createRequirement: function(requirement, comment, key) {
-    const spec = requirement.$$typeof ? requirement : <div className='spec'>{requirement}</div>;
-
-    return (
-      <div key={key} className='requirement'>
-        {spec}
-        <div className='match'>{comment}</div>
-      </div>
-    );
-  },
-
-  createArrayRequirement: function(requirement, comment) {
-    return this.createRequirement(this.formatEntries(null, requirement).join(', '), comment);
-  },
-
-  createObjectRequirement: function(requirement, comment) {
-    return Object.keys(requirement).map((subkey) => {
-      const infoType = Object.prototype.toString.call(requirement[subkey]);
-      let info = requirement[subkey];
-
-      if (infoType === '[object Array]') {
-        info = this.formatEntries(subkey, requirement[subkey]).join(', ');
-      } else if (infoType === '[object Object]') {
-        info = Object.keys(requirement[subkey]).map((loopkey) => {
-          return (
-            <div key={loopkey}>{loopkey} {this.formatEntry(loopkey, info[loopkey])}</div>
-          );
-        });
-      } else {
-        info = this.formatEntry(subkey, requirement[subkey]);
-      }
-
-      return this.createRequirement((
-        <div className='spec'>
-          <div className='column light'>{subkey}</div>
-          <div className='column'>{info}</div>
-        </div>), comment && comment[subkey], subkey);
-    });
   }
 };
 
-module.exports = ECSectionMixin;
+module.exports = FormatterMixin;
