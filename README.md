@@ -8,6 +8,7 @@
 [![Code Climate](https://codeclimate.com/github/jacogr/ethcore-jacogr/badges/gpa.svg)](https://codeclimate.com/github/jacogr/ethcore-jacogr)
 [![Issue Count](https://codeclimate.com/github/jacogr/ethcore-jacogr/badges/issue_count.svg)](https://codeclimate.com/github/jacogr/ethcore-jacogr)
 [![Test Coverage](https://codeclimate.com/github/jacogr/ethcore-jacogr/badges/coverage.svg)](https://codeclimate.com/github/jacogr/ethcore-jacogr/coverage)
+[![Coverage Status](https://coveralls.io/repos/github/jacogr/ethcore-jacogr/badge.svg?branch=master)](https://coveralls.io/github/jacogr/ethcore-jacogr?branch=master)
 
 ## checking out
 
@@ -48,6 +49,7 @@
 
 - ESLint, Sass-lint & pug-lint for static analysis (local, `gulp lint`)
 - [CodeClimate](https://codeclimate.com/github/jacogr/ethcore-jacogr) to do analysis (ESLint & GPA) and report on coverage (normally the go-to tool for the latter is Coveralls.io)
+- [Coveralls.io](https://coveralls.io/github/jacogr/ethcore-jacogr) to show the test coverage
 
 ## deviations
 
