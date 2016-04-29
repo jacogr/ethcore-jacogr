@@ -25,7 +25,7 @@ describe('components/section', () => {
     });
 
     it('has the correct comment', () => {
-      expect(utils.findRenderedDOMComponentWithClass(component, 'match').textContent).to.equal('comment');
+      expect(utils.findRenderedDOMComponentWithClass(component, 'comment').textContent).to.equal('comment');
     });
   });
 

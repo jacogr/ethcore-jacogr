@@ -9,7 +9,7 @@ const ECSection = React.createClass({
     return (
       <div key={key} className='requirement'>
         {spec}
-        <div className='match'>{comment}</div>
+        <div className='comment'>{comment}</div>
       </div>
     );
   },

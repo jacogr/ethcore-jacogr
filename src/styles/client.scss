@@ -16,12 +16,35 @@ body {
   margin: 0;
 }
 
+a {
+  color: inherit;
+  cursor: pointer;
+
+  &:visited,
+  &:hover,
+  &:active {
+    color: inherit;
+  }
+}
+
 .light {
   color: $color-heading;
 }
 
-.center {
-  text-align: center;
+.large {
+  font-size: $height-xlarge;
+
+  padding-bottom: .25em;
+}
+
+.normal,
+.url {
+  font-size: $height-large;
+  padding: .2em 0;
+}
+
+.normal+.url {
+  margin-top: .75em;
 }
 
 .intro {
@@ -33,7 +56,7 @@ body {
   position: relative;
 
   &:after {
-    background-image: url('images/ethcore-logo-white-square.png');
+    background-image: url('images/ethcore-logo-white-square-cmp.png');
     background-position: right top;
     background-repeat: no-repeat;
     background-size: auto 10em;
@@ -56,33 +79,6 @@ body {
     top: 0;
     z-index: -2;
   }
-
-  .large {
-    font-size: $height-xlarge;
-
-    padding-bottom: .25em;
-  }
-
-  .normal,
-  .url {
-    font-size: $height-large;
-    padding: .2em 0;
-  }
-
-  .normal+.url {
-    margin-top: .75em;
-  }
-
-  a {
-    color: inherit;
-    cursor: pointer;
-
-    &:visited,
-    &:hover,
-    &:active {
-      color: inherit;
-    }
-  }
 }
 
 .sections {
@@ -101,29 +97,27 @@ body {
     margin-bottom: .5em;
   }
 
-  .content {
-    .requirement {
-      @include span-columns(12);
-      margin-bottom: .75em;
+  .requirement {
+    @include span-columns(12);
+    margin-bottom: .75em;
 
-      .match {
-        @include span-columns(7);
-        color: $color-light;
-        font-family: $font-cursive;
-        font-size: $height-cursive;
+    .comment {
+      @include span-columns(7);
+      color: $color-light;
+      font-family: $font-cursive;
+      font-size: $height-cursive;
+    }
+
+    .spec {
+      @include span-columns(5);
+
+      .column {
+        @include span-columns(6);
       }
 
-      .spec {
-        @include span-columns(5);
-
-        .column {
-          @include span-columns(6);
-        }
-
-        &>.column {
-          &:first-child {
-            text-align: right;
-          }
+      &>.column {
+        &:first-child {
+          text-align: right;
         }
       }
     }
