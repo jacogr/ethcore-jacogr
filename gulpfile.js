@@ -13,6 +13,7 @@ const mocha = require('gulp-mocha');
 const path = require('path');
 const pug = require('gulp-pug');
 const puglint = require('gulp-pug-lint');
+const replace = require('gulp-replace');
 const sass = require('gulp-sass');
 const sasslint = require('gulp-sass-lint');
 const source = require('vinyl-source-stream');
@@ -23,15 +24,12 @@ const onErrorCallback = function(error) {
   this.emit('end');
 };
 
-gulp.task('coverage', ['test'], (doneCallback) => {
+const execute = function(cmd, doneCallback) {
   const _nonewline = function(str) {
     return str.replace(/\n/, '').replace(/\r/, '');
   };
 
-  const lcov = path.join(process.cwd(), 'coverage/lcov.info');
-  const bin = path.join(process.cwd(), 'node_modules/.bin/codeclimate-test-reporter');
-
-  const proc = exec([bin, '<', lcov].join(' '), (error) => {
+  const proc = exec(cmd, (error) => {
     if (error) {
       console.error(error);
     }
@@ -45,7 +43,31 @@ gulp.task('coverage', ['test'], (doneCallback) => {
   proc.stderr.on('data', (data) => {
     console.error(_nonewline(data));
   });
+};
+
+gulp.task('coverage', ['test'], () => {
+  return gulp
+    .src('coverage/lcov.info')
+    .pipe(replace(`SF:${process.cwd()}`, 'SF:'))
+    .pipe(replace(/SF:[\.]{0,1}\/src\//g, 'SF:src/'))
+    .pipe(gulp.dest('coverage/'));
 });
+
+gulp.task('submit-codeclimate', ['coverage'], (doneCallback) => {
+  const lcov = path.join(process.cwd(), 'coverage/lcov.info');
+  const bin = path.join(process.cwd(), 'node_modules/.bin/codeclimate-test-reporter');
+
+  execute([bin, '<', lcov].join(' '), doneCallback);
+});
+
+gulp.task('submit-coveralls', ['coverage'], (doneCallback) => {
+  const lcov = path.join(process.cwd(), 'coverage/lcov.info');
+  const bin = path.join(process.cwd(), 'node_modules/.bin/coveralls');
+
+  execute([bin, '<', lcov].join(' '), doneCallback);
+});
+
+gulp.task('submit-coverage', ['submit-codeclimate', 'submit-coveralls']);
 
 gulp.task('css', () => {
   const nm = path.join(__dirname, '/node_modules'); // eslint-disable-line no-undef

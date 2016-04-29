@@ -3,5 +3,5 @@ node_js:
   - "5"
 script:
   - gulp
-  - gulp coverage
+  - gulp submit-coverage
   - bash bin/deploy-gh-pages.sh
